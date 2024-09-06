@@ -1,0 +1,89 @@
+---
+import Button from "../components/Button.astro";
+import Overskrift from "../components/Overskrift.astro";
+
+// const { formular = "Form her" } = Astro.props;
+---
+
+<div class="max-w-md mx-auto pb-20 pr-10 pl-10 lg:pr-0 lg:pl-0" id="nav_4">
+  <div class="pt-20">
+    <Overskrift title="Køb bogen nu" />
+  </div>
+
+  <div class="grid grid-cols-1 gap-6">
+    <div x-data="{ quantity: 1 }" class="flex items-center space-x-4">
+      <h3>Hvor mange vil du bestille?</h3>
+      <button @click="if (quantity > 1) quantity--" class="px-4 py-2 bg-gray-200 rounded">-</button>
+      <!-- Display current quantity -->
+      <span x-text="quantity" class="text-lg font-bold"></span>
+      <button @click="quantity++" class="px-4 py-2 bg-gray-200 rounded">+</button>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <h3>Vælg leverings metode</h3>
+    <div x-data="{ selected: '' }" class="flex gap-10">
+      <div class="form-control">
+        <input type="checkbox" id="postnord" name="delivery" value="postnord" @click="selected = (selected === 'postnord') ? '' : 'postnord'" :checked="selected === 'postnord'" />
+        <label for="postnord">Postnord</label>
+      </div>
+
+      <div class="form-control">
+        <input type="checkbox" id="afhent" name="delivery" value="afhent" @click="selected = (selected === 'afhent') ? '' : 'afhent'" :checked="selected === 'afhent'" />
+        <label for="afhent">Afhent</label>
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <label class="block">
+      <span class="text-gray-700">Full name</span>
+      <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Jonas Jensen" />
+    </label>
+    <label class="block">
+      <span class="text-gray-700">Email address</span>
+      <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="john@example.com" />
+    </label>
+    <label class="block">
+      <span class="text-gray-700">Adresse</span>
+      <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Grønvej 84" />
+    </label>
+    <div class="flex gap-3">
+      <label class="flex-auto w-32">
+        <span class="text-gray-700">Postnummer</span>
+        <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="1234" />
+      </label>
+      <label class="flex-auto w-64">
+        <span class="text-gray-700">By</span>
+        <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="København" />
+      </label>
+    </div>
+    <label class="flex-auto w-64">
+      <span class="text-gray-700">Mobilnummer</span>
+      <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="+45 23344123" />
+    </label>
+    <div class="block">
+      <div class="mt-2">
+        <div>
+          <label class="inline-flex items-center">
+            <input type="checkbox" class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500" />
+            <span class="ml-2">Ja tak til nyhedsbrev</span>
+          </label>
+        </div>
+      </div>
+      <div class="grid justify-items-center pt-10">
+        <Button variant="secondary" size="large" style="">Køb nu</Button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  import { inView } from "motion";
+
+  const inviewelementet4 = document.querySelector(".p_1_fadein");
+  inView(inviewelementet4, () => {
+    inviewelementet4.classList.add("animate__animated", "animate__bounce", "delay-4");
+  });
+</script> -->

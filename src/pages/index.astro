@@ -1,0 +1,247 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import Overskrift from "../components/Overskrift.astro";
+import Kapitel from "../components/Kapitel.astro";
+import Rating from "../components/Rating.astro";
+import Star from "../components/Star.astro";
+import StarGrey from "../components/StarGrey.astro";
+import Formular from "../components/Formular.astro";
+---
+
+<MainLayout title="Titel">
+  <div class="p-10">
+    <section class="grid md:grid-cols-3 sm:grid-cols-1">
+      <div class="lg:col-span-2 max-w-4xl"><img src="/img/bog_ps.jpg" alt="pic1" /></div>
+      <div class="">
+        <div class="grid justify-items-stretch lg:pt-60">
+          <div class="font-extrabold text-4xl lg:text-5xl">Københavnerbilleder</div>
+          <div class="text-3xl lg:text-4xl">- en guide til hipster foto</div>
+          <div class="text-3xl lg:text-4xl">af Sten Simons</div>
+        </div>
+        <div class="grid justify-items-start pt-20">
+          <Button variant="primary" size="large" style="">Køb nu</Button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 grid-cols-1 pt-10 pb-10 max-w-4xl mx-auto gap-10 p_1_fadein" id="nav_1">
+      <div>
+        <p>
+          Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen
+          krydret med masser af inspirerende fotos. God læselyst!
+        </p>
+      </div>
+      <div class="grid md:grid-cols-1 grid-cols-1">
+        <div>
+          <div>
+            <p>Titel: Københavnerbilleder - en guide til hipster foto</p>
+          </div>
+          <div>
+            <p>Forfatter: Sten Simons</p>
+          </div>
+          <div>
+            <p>Antal sider: 344</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>Forlag: Mellem Linjerne</p>
+          </div>
+          <div>
+            <p>ISBN: 987-6-987654-32-1</p>
+          </div>
+          <div><p>Pris: 399.-</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid sm:grid-cols-1 lg:grid-cols-3">
+      <div class="grid justify-items-center img_1">
+        <img src="/img/aaben_ps.jpg" alt="pic1" />
+      </div>
+      <div class="grid justify-items-center img_2">
+        <img src="/img/oppefra_ps.jpg" alt="pic1" />
+      </div>
+      <div class="grid justify-items-center img_3">
+        <img src="/img/bog_ps.jpg" alt="pic1" />
+      </div>
+    </section>
+
+    <section class="">
+      <div class="pt-20" id="nav_2">
+        <Overskrift title="Bogens kapitler" />
+      </div>
+      <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-10 p_2_fadein">
+        <Kapitel
+          chapter="Kapitel 1 - Intro til street foto"
+          description="Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos."
+        />
+        <Kapitel
+          chapter="Kapitel 2 - Om at skyde street"
+          description="Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet."
+        />
+        <Kapitel
+          chapter="Kapitel 3 - Om at finde det rette motiv"
+          description="Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver."
+        />
+        <Kapitel
+          chapter="Kapitel 4 - Digital street foto"
+          description="De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. "
+        />
+        <Kapitel
+          chapter="Kapitel 5 - Analog street foto"
+          description="Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto. "
+        />
+        <Kapitel
+          chapter="Kapitel 6 - Om at skyde sort/hvid"
+          description="Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering. "
+        />
+        <Kapitel
+          chapter="Kapitel 7 - Kreative teknikker "
+          description="Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!"
+        />
+        <Kapitel
+          chapter="Kapitel 8 - Kom helt tæt på!"
+          description="Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…"
+        />
+      </div>
+      <div class="pt-5">
+        <Link href="/path/to/sample-chapter.pdf" download="SampleChapter.pdf" variant="secondary" size="small">Download Sample Chapter</Link>
+      </div>
+    </section>
+  </div>
+
+  <section class="pr-10 pl-10">
+    <div class="pt-20">
+      <Overskrift title="Anmeldelser af bogen" />
+    </div>
+    <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-10 md:gap-20 place-items-stretch">
+      <div>
+        <div class="flex pb-3"><Star /><Star /><Star /><Star /><Star /><StarGrey /></div>
+        <div>
+          <Rating
+            comments="Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen."
+            source="Hanne Hovgaard, Berlingeren "
+          />
+        </div>
+      </div>
+
+      <div>
+        <div class="flex pb-3"><Star /><Star /><Star /><Star /><StarGrey /></div>
+        <div>
+          <Rating comments="Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?" source="Volmer Hansen, Lukkertiden.dk " />
+        </div>
+      </div>
+
+      <div>
+        <div class="flex pb-3"><Star /><Star /><Star /><Star /><Star /><Star /></div>
+        <div>
+          <Rating
+            comments="Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde."
+            source="Kim Kloggaard, Fotojournalen.dk"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pt-20 pr-10 pl-10">
+      <Overskrift title="Gallery" />
+    </div>
+
+    <section class="grid sm:grid-cols-1 lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      <div class="lg:relative grid justify-items-center">
+        <img src="/img/black.jpg" alt="pic1" class="lg:relative z-10 border-[15px] border-gray-200 hover:scale-110 transition-transform duration-500 ease-out" />
+
+        <img src="/img/red.jpg" alt="pic2" class="lg:absolute top-[50px] right-[-400px] z-20 border-[15px] border-gray-200 -rotate-[8deg] hover:scale-110 transition-transform duration-500 ease-out" />
+
+        <img src="/img/lake.jpg" alt="pic3" class="lg:absolute bottom-[-50px] left-0 z-20 border-[15px] border-gray-200 -rotate-12 hover:scale-110 transition-transform duration-500 ease-out" />
+
+        <img src="/img/city.jpg" alt="pic4" class="lg:absolute top-[430px] right-[-380px] z-30 border-[15px] border-gray-200 rotate-12 hover:scale-110 transition-transform duration-500 ease-out" />
+      </div>
+    </section>
+
+    <section class="max-w-2xl mx-auto pr-10 pl-10" id="nav_3">
+      <div class="pt-40">
+        <Overskrift title="Forfatteren" />
+      </div>
+      <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-20 p_3_fadein">
+        <div>
+          <img src="/img/sten.jpg" alt="pic1" />
+        </div>
+        <div class="p_4_fadein">
+          <p>
+            Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk -
+            pinlige billeder fra nattelivet.” Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal
+            af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+          </p>
+        </div>
+      </div>
+    </section>
+    <Formular />
+  </section>
+</MainLayout>
+
+<style>
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  .delay-2 {
+    animation-delay: 1s;
+  }
+  .delay-3 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-4 {
+    animation-delay: 1s;
+    animation-duration: 4s;
+  }
+
+  .delay-5 {
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+</style>
+
+<script>
+  import { inView } from "motion";
+
+  const inviewelementet = document.querySelector(".img_1");
+  inView(inviewelementet, () => {
+    inviewelementet.classList.add("animate__animated", "animate__fadeInUp", "duration-500", "delay-1");
+  });
+
+  const inviewelementet2 = document.querySelector(".img_2");
+  inView(inviewelementet2, () => {
+    inviewelementet2.classList.add("animate__animated", "animate__fadeInUp", "duration-500", "delay-2");
+  });
+
+  const inviewelementet3 = document.querySelector(".img_3");
+  inView(inviewelementet3, () => {
+    inviewelementet3.classList.add("animate__animated", "animate__fadeInUp", "duration-500", "delay-3");
+  });
+
+  const inviewelementet4 = document.querySelector(".p_1_fadein");
+  inView(inviewelementet4, () => {
+    inviewelementet4.classList.add("animate__animated", "animate__fadeInUp", "delay-4");
+  });
+
+  const inviewelementet5 = document.querySelector(".p_2_fadein");
+  inView(inviewelementet5, () => {
+    inviewelementet5.classList.add("animate__animated", "animate__fadeInUp", "delay-5");
+  });
+
+  const inviewelementet6 = document.querySelector(".p_3_fadein");
+  inView(inviewelementet6, () => {
+    inviewelementet6.classList.add("animate__animated", "animate__fadeInLeft", "delay-1");
+  });
+
+  const inviewelementet7 = document.querySelector(".p_4_fadein");
+  inView(inviewelementet7, () => {
+    inviewelementet7.classList.add("animate__animated", "animate__fadeInRight", "delay-3");
+  });
+</script>
